@@ -1,0 +1,7 @@
+parameters:
+#    ks_log.example.class: Ks\LogBundle\Example
+
+services:
+#    ks_log.example:
+#        class: %ks_log.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

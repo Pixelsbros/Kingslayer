@@ -1,3 +1,7 @@
+KsLogBundle:
+    resource: "@KsLogBundle/Resources/config/routing.yml"
+    prefix:   /
+
 KsNewsBundle:
     resource: "@KsNewsBundle/Resources/config/routing.yml"
     prefix:   /
