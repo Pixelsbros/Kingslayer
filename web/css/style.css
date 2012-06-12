@@ -21,13 +21,16 @@ body{
 	font-weight:normal;
 	font-family:Trebuchet MS;
 	color:#A67E2E;
+	text-shadow:1px 1px 5px #000;
 }
 #content{
 	width:918px;
 	padding:15px;
 	border-radius:10px;
 	background:url("../img/bg_body.png") rgba(255,255,255,0.8);
-
+	box-shadow:0 0 15px #000;
+	height:auto;
+	overflow:hidden;
 }
 #content h1{
 	font-size:30pt;
@@ -39,4 +42,26 @@ body{
 footer{
 	text-align:center;
 	font-size:9pt;
+}
+
+.form_log{
+	width:419px;
+	padding:15px;
+	background:rgba(0,0,0,0.4);
+	float:left;
+	margin-top:15px;
+	border-radius:5px;
+}
+.form_log label{
+	color:#fff;
+	font-size:11pt;
+	min-width:150px;
+	float:left;
+	vertical-align:middle;
+}
+.form_log input[type=text], 
+.form_log input[type=password], 
+.form_log input[type=email]{
+	width:250px;
+	margin-bottom:5px;
 }

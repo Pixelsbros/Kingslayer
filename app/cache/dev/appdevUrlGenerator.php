@@ -34,6 +34,13 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_step' => true,
        '_configurator_final' => true,
        'KsLogBundle_homepage' => true,
+       'utilisateur' => true,
+       'utilisateur_show' => true,
+       'utilisateur_new' => true,
+       'utilisateur_create' => true,
+       'utilisateur_edit' => true,
+       'utilisateur_update' => true,
+       'utilisateur_delete' => true,
        'KsNewsBundle_homepage' => true,
     );
 
@@ -161,6 +168,41 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getKsLogBundle_homepageRouteInfo()
     {
         return array(array (), array (  '_controller' => 'Ks\\LogBundle\\Controller\\LogController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/log',  ),));
+    }
+
+    private function getutilisateurRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/log/crud/',  ),));
+    }
+
+    private function getutilisateur_showRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/log/crud',  ),));
+    }
+
+    private function getutilisateur_newRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::newAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/log/crud/new',  ),));
+    }
+
+    private function getutilisateur_createRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::createAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/log/crud/create',  ),));
+    }
+
+    private function getutilisateur_editRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::editAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/edit',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/log/crud',  ),));
+    }
+
+    private function getutilisateur_updateRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::updateAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/update',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/log/crud',  ),));
+    }
+
+    private function getutilisateur_deleteRouteInfo()
+    {
+        return array(array (  0 => 'id',), array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::deleteAction',), array (  '_method' => 'post',), array (  0 =>   array (    0 => 'text',    1 => '/delete',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'id',  ),  2 =>   array (    0 => 'text',    1 => '/log/crud',  ),));
     }
 
     private function getKsNewsBundle_homepageRouteInfo()

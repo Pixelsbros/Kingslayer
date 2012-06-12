@@ -148,6 +148,62 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Ks\\LogBundle\\Controller\\LogController::indexAction',  '_route' => 'KsLogBundle_homepage',);
         }
 
+        if (0 === strpos($pathinfo, '/log/crud')) {
+            // utilisateur
+            if (rtrim($pathinfo, '/') === '/log/crud') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'utilisateur');
+                }
+                return array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::indexAction',  '_route' => 'utilisateur',);
+            }
+
+            // utilisateur_show
+            if (preg_match('#^/log/crud/(?P<id>[^/]+?)/show$#s', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::showAction',)), array('_route' => 'utilisateur_show'));
+            }
+
+            // utilisateur_new
+            if ($pathinfo === '/log/crud/new') {
+                return array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::newAction',  '_route' => 'utilisateur_new',);
+            }
+
+            // utilisateur_create
+            if ($pathinfo === '/log/crud/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_utilisateur_create;
+                }
+                return array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::createAction',  '_route' => 'utilisateur_create',);
+            }
+            not_utilisateur_create:
+
+            // utilisateur_edit
+            if (preg_match('#^/log/crud/(?P<id>[^/]+?)/edit$#s', $pathinfo, $matches)) {
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::editAction',)), array('_route' => 'utilisateur_edit'));
+            }
+
+            // utilisateur_update
+            if (preg_match('#^/log/crud/(?P<id>[^/]+?)/update$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_utilisateur_update;
+                }
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::updateAction',)), array('_route' => 'utilisateur_update'));
+            }
+            not_utilisateur_update:
+
+            // utilisateur_delete
+            if (preg_match('#^/log/crud/(?P<id>[^/]+?)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_utilisateur_delete;
+                }
+                return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ks\\LogBundle\\Controller\\UtilisateurController::deleteAction',)), array('_route' => 'utilisateur_delete'));
+            }
+            not_utilisateur_delete:
+
+        }
+
         // KsNewsBundle_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+?)$#s', $pathinfo, $matches)) {
             return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ks\\NewsBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'KsNewsBundle_homepage'));

@@ -6,6 +6,20 @@
 
 {% block log_body %}
 	<div id="log_content">
-		<i>Ici sera plac&eacute; les formulaires d' inscription / Connexion</i>
+		<div class="form_log">
+			<form method="post" {{ form_enctype(form) }}>
+				{{ form_label(form.Nom, "Votre nom") }}
+				{{ form_widget(form.Nom) }}
+				{{ form_label(form.Prenom, "Votre Prenom") }}
+				{{ form_widget(form.Prenom) }}
+				{{ form_label(form.Pseudo, "Votre Pseudo") }}
+				{{ form_widget(form.Pseudo) }}
+				{{ form_label(form.Mdp, "Mot de passe") }}
+				{{ form_widget(form.Mdp) }}
+				{{ form_label(form.Mail, "Email") }}
+				{{ form_widget(form.Mail) }}
+					<input type="submit" value="S' inscrire"/>
+			</form>
+		</div>
 	</div>
 {% endblock %}

@@ -1,3 +1,7 @@
 KsLogBundle_homepage:
     pattern:  /log
     defaults: { _controller: KsLogBundle:Log:index }
+
+KsLogBundle_crud:
+    resource: "routing/utilisateur.yml"
+    prefix:   /log/crud

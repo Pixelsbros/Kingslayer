@@ -1,0 +1,49 @@
+<h1>Utilisateur list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Pseudo</th>
+            <th>Mail</th>
+            <th>Mdp</th>
+            <th>Ip</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('utilisateur_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{% if entity.date %}{{ entity.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.nom }}</td>
+            <td>{{ entity.prenom }}</td>
+            <td>{{ entity.pseudo }}</td>
+            <td>{{ entity.mail }}</td>
+            <td>{{ entity.mdp }}</td>
+            <td>{{ entity.ip }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('utilisateur_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('utilisateur_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('utilisateur_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>

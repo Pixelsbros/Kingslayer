@@ -1,0 +1,4 @@
+[2012-06-12 14:27:38] request.INFO: Matched route "KsLogBundle_homepage" (parameters: "_controller": "Ks\LogBundle\Controller\LogController::indexAction", "_route": "KsLogBundle_homepage") [] []
+[2012-06-12 14:27:38] request.CRITICAL: Doctrine\ORM\Mapping\MappingException: Class Ks\LogBundle\Entity\Utilisateur is not a valid entity or mapped super class. (uncaught exception) at D:\wamp\www\Kingslayer\vendor\doctrine\lib\Doctrine\ORM\Mapping\MappingException.php line 142 [] []
+[2012-06-12 16:18:07] request.INFO: Matched route "KsLogBundle_homepage" (parameters: "_controller": "Ks\LogBundle\Controller\LogController::indexAction", "_route": "KsLogBundle_homepage") [] []
+[2012-06-12 16:18:07] request.CRITICAL: Doctrine\ORM\Mapping\MappingException: Class Ks\LogBundle\Entity\Utilisateur is not a valid entity or mapped super class. (uncaught exception) at D:\wamp\www\Kingslayer\vendor\doctrine\lib\Doctrine\ORM\Mapping\MappingException.php line 142 [] []
