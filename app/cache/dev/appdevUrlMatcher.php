@@ -143,6 +143,11 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // KsLogBundle_homepage
+        if ($pathinfo === '/log') {
+            return array (  '_controller' => 'Ks\\LogBundle\\Controller\\LogController::indexAction',  '_route' => 'KsLogBundle_homepage',);
+        }
+
         // KsNewsBundle_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]+?)$#s', $pathinfo, $matches)) {
             return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Ks\\NewsBundle\\Controller\\DefaultController::indexAction',)), array('_route' => 'KsNewsBundle_homepage'));

@@ -1,0 +1,16 @@
+{# src/Sdz/BlogBundle/Resources/views/layout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+	Accueil - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div id="bundles_global">
+		<h1>Rejoins nous</h1>
+		{% block log_body %}
+		{% endblock %}
+	</div>
+
+{% endblock %}
