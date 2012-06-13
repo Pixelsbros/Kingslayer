@@ -51,12 +51,14 @@ footer{
 	float:left;
 	margin-top:15px;
 	border-radius:5px;
+	text-align:center;
 }
 .form_log label{
 	color:#fff;
 	font-size:11pt;
 	min-width:150px;
 	float:left;
+	text-align:left;
 	vertical-align:middle;
 }
 .form_log input[type=text], 
@@ -64,4 +66,29 @@ footer{
 .form_log input[type=email]{
 	width:250px;
 	margin-bottom:5px;
+	border-radius:5px;
+	padding:3px;
+	border:none;
+}
+.form_log input[type=submit]{
+	padding:7px;
+	margin-left:auto;
+	margin-right:auto;
+	border:solid 1px #000;
+	background: #45484d;
+	background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%);
+	background: -o-linear-gradient(top,  #45484d 0%,#000000 100%);
+	background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%);
+	background: linear-gradient(top,  #45484d 0%,#000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+	border-radius:5px;
+	margin-top:10px;
+	color:#e8e8e8;
+}
+.form_log input[type=submit]:hover{
+	cursor:pointer;
+	box-shadow:0 0 10px #000 inset;
+
 }
