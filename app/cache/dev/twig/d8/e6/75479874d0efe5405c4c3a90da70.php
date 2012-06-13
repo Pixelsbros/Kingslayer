@@ -42,19 +42,20 @@ class __TwigTemplate_d8e675479874d0efe5405c4c3a90da70 extends Twig_Template
         // line 10
         echo "\t<div id=\"bundles_global\">
 \t\t<h1>Rejoins nous</h1>
+\t\t
 \t\t";
-        // line 12
+        // line 13
         $this->displayBlock('log_body', $context, $blocks);
-        // line 14
+        // line 15
         echo "\t</div>
 
 ";
     }
 
-    // line 12
+    // line 13
     public function block_log_body($context, array $blocks = array())
     {
-        // line 13
+        // line 14
         echo "\t\t";
     }
 
@@ -70,6 +71,6 @@ class __TwigTemplate_d8e675479874d0efe5405c4c3a90da70 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  56 => 13,  53 => 12,  47 => 14,  45 => 12,  41 => 10,  38 => 9,  31 => 6,  28 => 5,);
+        return array (  57 => 14,  54 => 13,  48 => 15,  46 => 13,  41 => 10,  38 => 9,  31 => 6,  28 => 5,  83 => 23,  79 => 22,  75 => 21,  71 => 20,  67 => 19,  63 => 18,  59 => 17,  55 => 16,  51 => 15,  47 => 14,  43 => 13,  36 => 8,  33 => 7,  27 => 5,);
     }
 }
