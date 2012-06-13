@@ -35,56 +35,66 @@ class __TwigTemplate_806911fbcab5a08dee7b2894e18d56f5 extends Twig_Template
     public function block_log_body($context, array $blocks = array())
     {
         // line 8
-        echo "\t<div id=\"log_content\">
-\t\t<div class=\"form_log\">
-\t\t\t<form method=\"post\" ";
-        // line 10
+        echo "\t\t<div class=\"ribbon-wrapper\">
+\t\t<div class=\"ribbon-front\">
+\t\t\t<div class=\"form_log\">
+\t\t\t\t<h2>Inscription</h2>
+\t\t\t\t<form method=\"post\" ";
+        // line 12
         echo $this->env->getExtension('form')->renderEnctype($this->getContext($context, "form"));
         echo ">
-\t\t\t\t";
-        // line 11
+\t\t\t\t\t";
+        // line 13
         echo $this->env->getExtension('form')->renderLabel($this->getAttribute($this->getContext($context, "form"), "Nom"), "Votre nom");
         echo "
-\t\t\t\t";
-        // line 12
+\t\t\t\t\t";
+        // line 14
         echo $this->env->getExtension('form')->renderWidget($this->getAttribute($this->getContext($context, "form"), "Nom"));
         echo "
-\t\t\t\t";
-        // line 13
+\t\t\t\t\t";
+        // line 15
         echo $this->env->getExtension('form')->renderLabel($this->getAttribute($this->getContext($context, "form"), "Prenom"), "Votre Prenom");
         echo "
-\t\t\t\t";
-        // line 14
+\t\t\t\t\t";
+        // line 16
         echo $this->env->getExtension('form')->renderWidget($this->getAttribute($this->getContext($context, "form"), "Prenom"));
         echo "
-\t\t\t\t";
-        // line 15
+\t\t\t\t\t";
+        // line 17
         echo $this->env->getExtension('form')->renderLabel($this->getAttribute($this->getContext($context, "form"), "Pseudo"), "Votre Pseudo");
         echo "
-\t\t\t\t";
-        // line 16
+\t\t\t\t\t";
+        // line 18
         echo $this->env->getExtension('form')->renderWidget($this->getAttribute($this->getContext($context, "form"), "Pseudo"));
         echo "
-\t\t\t\t";
-        // line 17
+\t\t\t\t\t";
+        // line 19
         echo $this->env->getExtension('form')->renderLabel($this->getAttribute($this->getContext($context, "form"), "Mdp"), "Mot de passe");
         echo "
-\t\t\t\t";
-        // line 18
+\t\t\t\t\t";
+        // line 20
         echo $this->env->getExtension('form')->renderWidget($this->getAttribute($this->getContext($context, "form"), "Mdp"));
         echo "
-\t\t\t\t";
-        // line 19
+\t\t\t\t\t";
+        // line 21
         echo $this->env->getExtension('form')->renderLabel($this->getAttribute($this->getContext($context, "form"), "Mail"), "Email");
         echo "
-\t\t\t\t";
-        // line 20
+\t\t\t\t\t";
+        // line 22
         echo $this->env->getExtension('form')->renderWidget($this->getAttribute($this->getContext($context, "form"), "Mail"));
         echo "
-\t\t\t\t\t<input type=\"submit\" value=\"S' inscrire\"/>
-\t\t\t</form>
+\t\t\t\t\t\t<input type=\"submit\" value=\"S' inscrire\"/>
+\t\t\t\t</form>
+\t\t\t</div>
 \t\t</div>
+\t\t<div class=\"ribbon-edge-topleft\"></div>
+\t\t<div class=\"ribbon-edge-topright\"></div>
+\t\t<div class=\"ribbon-edge-bottomleft\"></div>
+\t\t<div class=\"ribbon-edge-bottomright\"></div>
+\t\t<div class=\"ribbon-back-left\"></div>
+\t\t<div class=\"ribbon-back-right\"></div>
 \t</div>
+\t\t
 ";
     }
 
@@ -100,6 +110,6 @@ class __TwigTemplate_806911fbcab5a08dee7b2894e18d56f5 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  80 => 20,  76 => 19,  72 => 18,  68 => 17,  64 => 16,  60 => 15,  56 => 14,  52 => 13,  48 => 12,  44 => 11,  40 => 10,  36 => 8,  33 => 7,  27 => 5,);
+        return array (  82 => 22,  78 => 21,  74 => 20,  70 => 19,  66 => 18,  62 => 17,  58 => 16,  54 => 15,  50 => 14,  46 => 13,  42 => 12,  36 => 8,  33 => 7,  27 => 5,);
     }
 }

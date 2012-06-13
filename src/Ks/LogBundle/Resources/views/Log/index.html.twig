@@ -5,21 +5,31 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block log_body %}
-	<div id="log_content">
-		<div class="form_log">
-			<form method="post" {{ form_enctype(form) }}>
-				{{ form_label(form.Nom, "Votre nom") }}
-				{{ form_widget(form.Nom) }}
-				{{ form_label(form.Prenom, "Votre Prenom") }}
-				{{ form_widget(form.Prenom) }}
-				{{ form_label(form.Pseudo, "Votre Pseudo") }}
-				{{ form_widget(form.Pseudo) }}
-				{{ form_label(form.Mdp, "Mot de passe") }}
-				{{ form_widget(form.Mdp) }}
-				{{ form_label(form.Mail, "Email") }}
-				{{ form_widget(form.Mail) }}
-					<input type="submit" value="S' inscrire"/>
-			</form>
+		<div class="ribbon-wrapper">
+		<div class="ribbon-front">
+			<div class="form_log">
+				<h2>Inscription</h2>
+				<form method="post" {{ form_enctype(form) }}>
+					{{ form_label(form.Nom, "Votre nom") }}
+					{{ form_widget(form.Nom) }}
+					{{ form_label(form.Prenom, "Votre Prenom") }}
+					{{ form_widget(form.Prenom) }}
+					{{ form_label(form.Pseudo, "Votre Pseudo") }}
+					{{ form_widget(form.Pseudo) }}
+					{{ form_label(form.Mdp, "Mot de passe") }}
+					{{ form_widget(form.Mdp) }}
+					{{ form_label(form.Mail, "Email") }}
+					{{ form_widget(form.Mail) }}
+						<input type="submit" value="S' inscrire"/>
+				</form>
+			</div>
 		</div>
+		<div class="ribbon-edge-topleft"></div>
+		<div class="ribbon-edge-topright"></div>
+		<div class="ribbon-edge-bottomleft"></div>
+		<div class="ribbon-edge-bottomright"></div>
+		<div class="ribbon-back-left"></div>
+		<div class="ribbon-back-right"></div>
 	</div>
+		
 {% endblock %}
